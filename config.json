@@ -1,0 +1,15 @@
+{   
+    "svr": {
+        "port": 7001
+    },
+    "request": {
+        "uid": 609941,
+        "openid": "osvfL4o7GhdEaXVDsGgsFEkLZoc4",
+        "session": "",
+        "ver": "2.0.0"
+    },
+    "scheduleRule": {
+        "hour": 23,
+        "minute": 45
+    }
+}
