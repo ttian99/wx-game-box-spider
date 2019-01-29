@@ -72,6 +72,56 @@ https://goplatform.minigame.qq.com/mpgather/mgetfeatured
 - 链接：https://gamecenter.phonecoolgame.com/hezi/getHeziGames?appid=wx845a2f34af2f4235&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBpZCI6Ind4ODQ1YTJmMzRhZjJmNDIzNSIsInVkYXRhIjoib0xIN2I0dDloLW4zQVVRbGdRelNCQmVkQjVIVSIsImV4cCI6MTU0NTcyNTg1Nzc4MiwiaWRlbnRpZnkiOiJqc2Rmc2Y0ZmRwb21rZDVzYUFkeiJ9.y7YOaeShRePwHZQGduKJKNsIv-3o3esQ5kMtbeQPTic
 - 参数：appid=wx845a2f34af2f4235
 
+## 4399游戏
+通过抓包分析，4399游戏的数据在一个请求上
+- 请求方式：GET
+- 链接：https://wechat.5054399.com/js/index.js
+
+## 4399新游戏
+通过抓包分析，4399游戏的数据在一个请求上
+- 请求方式：GET
+- 链接：https://miniprogram.my4399.com/api/gamecenter.php?dev2=1&a=game&c=gameList&v=3
+- 返回数据中：classify表示按分类来的游戏，miniGame表示所有小游戏，section表示首页显示的游戏
+
+## 好玩123游戏中心
+通过抓包分析，好玩123游戏中心的数据在一个请求上
+- 请求方式：GET
+- 链接：https://xyx-mainland-api.raink.com.cn/v1/index/list?box_id=5049
+- 返回数据中：category表示分类的数组, data表示所有的游戏
+
+## 九曲游戏中心(未完成)
+通过抓包分析，好玩123游戏中心的数据都通过一个地址请求数据
+- 请求方式：post
+- 连接：https://wxgame.52wanh5.cc/request
+
+```js
+
+// 第一次请求需要参数
+cmd	V2_Box_Info_start
+token	946c05c5b298
+platform	2
+game_id	1000
+version	2.0.29
+open_id	ouBAW0QDfJT51Ise230nPRw6KNwM
+
+// 后续请求需要参数
+cmd	V2_Box_Info_getAppList
+token	946c05c5b298
+platform	2
+game_id	1000
+version	2.0.29
+open_id	ouBAW0QDfJT51Ise230nPRw6KNwM
+page	2
+rows_per_page	4
+
+```
+
+## 5588游戏
+- 请求方式：GET
+- 链接：https://wxhz.jfydgame.com/jfyd_advert_wechat/wxbox?content=eyJ1aWQiOiI2ZWIwNmNhZC1iNTRlLTRkZjktYTJlZC1kYTc4MjgxZjFjODQiLCJ3eGlkIjoid3hlNjc1YjZhYWQ5NjEyYzc0IiwiZnJvbSI6LTF9&sign=64cffaa9a46b165e7b3647a5799d615d
+- 参数：有2个参数：content(base64加密了)，sign
+- 注意：返回参数用base64加密了，需要解密
+
 ## 手Q - 玩一玩小游戏
 ### 玩一玩小游戏包提取链接
 大部分压缩包形式的游戏可以通过如下链接形式，GET的方式获取。

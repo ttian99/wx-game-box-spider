@@ -5,20 +5,23 @@ const qqgameSpider = require('./lib/wx-qqgame-spider');
 const readygoSpider = require('./lib/wx-readygo-spider');
 const fkwSpider = require('./lib/wx-fkw-spider');
 const scheduler = require('./lib/scheduler');
+const new4399Spider = require('./lib/wx-4399new-spider');
+const new5588Spider = require('./lib/wx-5588-spider');
+const haowan123Spider = require('./lib/wx-haowan123-spider');
+
+// 保证报错
+process.addListener('uncaughtException', (err) => { throw err });
 
 // 所有任务
 async function task() {
     console.log('== start wx-game-box-spider task ==');
     console.log(new Date());
-    console.log('start qqgame spider');
     await qqgameSpider();
-    console.log('end qqgame spider');
-    console.log('start readygo spider');
     await readygoSpider();
-    console.log('end readygo spider');
-    console.log('start fkw spider');
     await fkwSpider();
-    console.log('end fkw spider');
+    await haowan123Spider();
+    await new5588Spider();
+    await new4399Spider();
     console.log('== end wx-game-box-spider task ==');
     console.log(new Date());
 }
