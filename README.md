@@ -129,3 +129,9 @@ rows_per_page	4
 ```
 http://hudongziptest-1251316161.file.myqcloud.com/game/10001/3091/2135/4916b31b1b9aab4a0f9b26b1127b9678.zip?randomKey=-831122906
 ```
+
+###
+由于QQ使用的是
+- 推荐页链接：https://lgame.qq.com/html/game-city/index?__forcenew__=1&tab=game_city&newshopwhitelist=1&client=androidQQ&version=7.9.8.3930&device=hennessy&is_new_store_user=1&is_game_box_user=0&screenWidth=360&screenHeight=640&statusBarHeight=20&screenDensity=3.0&suin=176553611&openCapsule=0&_wv=16777223&_wwv=520&webviewOpenType=1&apollo_task_id=197039&url_redirect=1
+
+- 
